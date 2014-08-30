@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icons/bug.png</file>
+        <file>icons/disk.png</file>
+        <file>icons/folder-open.png</file>
+        <file>icons/iceweasel_icon.png</file>
+        <file>icons/snail.png</file>
+        <file>icons/Qt-logo.png</file>
+        <file>icons/information.png</file>
+        <file>icons/arrow-repeat.png</file>
+    </qresource>
+</RCC>

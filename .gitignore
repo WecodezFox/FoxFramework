@@ -19,3 +19,9 @@
 *.exe
 *.out
 *.app
+
+#QtCreator user files
+*.pro.user* 
+
+#doc files
+DOC*

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>647</width>
+    <height>468</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>FoxFramework</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resource.qrc">
+    <normaloff>:/icons/iceweasel_icon.png</normaloff>:/icons/iceweasel_icon.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabs"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>647</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuMenu">
+    <property name="title">
+     <string>Menu</string>
+    </property>
+    <widget class="QMenu" name="menuMaple_Size">
+     <property name="title">
+      <string>Maple Size</string>
+     </property>
+     <addaction name="actionAuto"/>
+     <addaction name="action800"/>
+     <addaction name="action1024"/>
+     <addaction name="action1366"/>
+    </widget>
+    <addaction name="actionRun_MapleStory"/>
+    <addaction name="menuMaple_Size"/>
+   </widget>
+   <widget class="QMenu" name="menuAbot">
+    <property name="title">
+     <string>About</string>
+    </property>
+    <addaction name="actionQt"/>
+    <addaction name="actionIcons"/>
+    <addaction name="actionFramework_Itself"/>
+   </widget>
+   <addaction name="menuMenu"/>
+   <addaction name="menuAbot"/>
+  </widget>
+  <action name="actionRun_MapleStory">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/icons/snail.png</normaloff>:/icons/snail.png</iconset>
+   </property>
+   <property name="text">
+    <string>Run MapleStory</string>
+   </property>
+  </action>
+  <action name="actionAuto">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Auto</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="action800">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>800x600</string>
+   </property>
+  </action>
+  <action name="action1024">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>1024x768</string>
+   </property>
+  </action>
+  <action name="action1366">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>1366x768</string>
+   </property>
+  </action>
+  <action name="actionQt">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/icons/Qt-logo.png</normaloff>:/icons/Qt-logo.png</iconset>
+   </property>
+   <property name="text">
+    <string>Qt</string>
+   </property>
+  </action>
+  <action name="actionIcons">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/icons/information.png</normaloff>:/icons/information.png</iconset>
+   </property>
+   <property name="text">
+    <string>Icons</string>
+   </property>
+  </action>
+  <action name="actionFramework_Itself">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/icons/iceweasel_icon.png</normaloff>:/icons/iceweasel_icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>FoxFramework</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>

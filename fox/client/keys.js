@@ -1,0 +1,45 @@
+print("importing virtual keys");
+
+KeyBoard.VK_CONTROL = 0x11;
+KeyBoard.VK_SHIFT = 0x10;
+KeyBoard.VK_RETURN = 0x0D;
+KeyBoard.VK_ESCAPE = 0x1B;
+KeyBoard.VK_SPACE = 0x20;
+
+KeyBoard.VK_0 = 0x30;
+KeyBoard.VK_1 = 0x31;
+KeyBoard.VK_2 = 0x32;
+KeyBoard.VK_3 = 0x33;
+KeyBoard.VK_4 = 0x34;
+KeyBoard.VK_5 = 0x35;
+KeyBoard.VK_6 = 0x36;
+KeyBoard.VK_7 = 0x37;
+KeyBoard.VK_8 = 0x38;
+KeyBoard.VK_9 = 0x39;
+
+KeyBoard.VK_A = 0x41;
+KeyBoard.VK_B = 0x42;
+KeyBoard.VK_C = 0x43;
+KeyBoard.VK_D = 0x44;
+KeyBoard.VK_E = 0x45;
+KeyBoard.VK_F = 0x46;
+KeyBoard.VK_G = 0x47;
+KeyBoard.VK_H = 0x48;
+KeyBoard.VK_I = 0x49;
+KeyBoard.VK_J = 0x4A;
+KeyBoard.VK_K = 0x4B;
+KeyBoard.VK_L = 0x4C;
+KeyBoard.VK_M = 0x4D;
+KeyBoard.VK_N = 0x4E;
+KeyBoard.VK_O = 0x4F;
+KeyBoard.VK_P = 0x50;
+KeyBoard.VK_Q = 0x51;
+KeyBoard.VK_R = 0x52;
+KeyBoard.VK_S = 0x53;
+KeyBoard.VK_T = 0x54;
+KeyBoard.VK_U = 0x55;
+KeyBoard.VK_V = 0x56;
+KeyBoard.VK_W = 0x57;
+KeyBoard.VK_X = 0x58;
+KeyBoard.VK_Y = 0x59;
+KeyBoard.VK_Z = 0x5A;

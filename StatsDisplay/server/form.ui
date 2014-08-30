@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>556</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="1">
+    <widget class="QProgressBar" name="hpBar">
+     <property name="accessibleName">
+      <string>hpBar</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #fcb4c2, stop: 0.3 #de1645, stop: 0.75 #de1640, stop: 1 #94162e);
+}
+QProgressBar{
+color: rgb(255, 255, 255);
+}</string>
+     </property>
+     <property name="maximum">
+      <number>1</number>
+     </property>
+     <property name="value">
+      <number>1</number>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="format">
+      <string>%v/%m</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Hp</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>Mp</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QProgressBar" name="mpBar">
+     <property name="accessibleName">
+      <string>mpBar</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {
+     background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #cbefff, stop: 0.3 #41bffc, stop: 0.75 #41bffc, stop: 1 #247ba6);
+}
+QProgressBar{
+color: rgb(255, 255, 255);
+}</string>
+     </property>
+     <property name="maximum">
+      <number>1</number>
+     </property>
+     <property name="value">
+      <number>1</number>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="format">
+      <string>%v/%m</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QProgressBar" name="expBar">
+     <property name="accessibleName">
+      <string>expBar</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {
+     background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #f2febe, stop: 0.3 #c7e73a, stop: 0.75 #c7e73a, stop: 1 #6e9334);
+}
+QProgressBar{
+color: rgb(255, 255, 255);
+}</string>
+     </property>
+     <property name="maximum">
+      <number>1</number>
+     </property>
+     <property name="value">
+      <number>1</number>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="format">
+      <string>%v/%m</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="label_3">
+     <property name="text">
+      <string>Exp</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="2">
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>159</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="4" column="1">
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>137</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
