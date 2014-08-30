@@ -1,0 +1,4 @@
+FoxFramework
+============
+
+Maplestory scriptable bot
