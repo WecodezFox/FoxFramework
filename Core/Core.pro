@@ -48,3 +48,6 @@ Release:OBJECTS_DIR = release/.obj
 Release:MOC_DIR = release/.moc
 Release:RCC_DIR = release/.rcc
 Release:UI_DIR = release/.ui
+
+OTHER_FILES += \
+    ../FoxFrameworkApi.txt

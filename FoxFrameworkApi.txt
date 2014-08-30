@@ -1,0 +1,135 @@
+FoxFramework Script Api:
+This is the Api available with the core.
+Other plugin can extend this Api.
+Check plugin docs for details.
+
+Server Side (exe):
+
+    GUI:
+        void registerWidget(QString name, QWidget* widget):
+            "Add a new tab with 'widget' as content and 'name' as Tab name."
+
+        void changeTabName(QString newName);
+            "Changes the main tab name to 'newName'."
+
+        void toogleReload(bool state);
+            "Set reloading flag to 'state'."
+
+    Socket:
+        void send(QString message, QString extension):
+            "Send 'message' to the client extension 'extension'.
+            Usually called with __extension__ as second argument."
+
+    SaveSettings:
+        "Implement this function if your extension want to save any stuff.
+        Must return a string."
+
+    LoadSettings:
+        "Implement this function to read your saved stuff.
+        Must take a string as argument."
+
+    Sync:
+        "Implement this function if u need to sync some data with the client
+        on start up. This'll be called after crash-reload."
+
+
+Client Side (dll):
+
+    KeyBoard:
+        "See Fox.Keys for keys or http://msdn.microsoft.com/es-es/library/windows/desktop/dd375731%28v=vs.85%29.aspx for key codes"
+
+        void SendKey(unsigned int uiKey);
+            "Press and release 'uiKey";
+
+        void HoldKey(unsigned int uiKey, int iHoldingDelay);
+            "Hold 'uiKey' and release it after 'iHoldingDelay' milliseconds"
+
+    Injector:
+        bool inject(Qstring dllFile);
+            "Load dllFile (Must be on extension caller folder) on Maplestory."
+
+    AoBScanner:
+        QList<unsigned long> Find(QString pattern);
+            "Finds maximum 10 ocurrences of 'pattern' on Maplestory memory."
+
+    Bot:
+        bool registerStep(function f, int delay);
+            "Adds 'f' to the bot queue. 'f' will be called every 'delay' milliseconds."
+
+        void pause();
+            "Pause the bot thread."
+
+        void resume();
+            "Resume the bot thread."
+
+    Addys:
+        "A namespace where register addreses."
+
+    Pointers:
+        "A namespace where register pointers."
+
+    Memory:
+        uchar ReadByte(ulong ulBase, ulong iOffset);
+            "Read byte pointer"
+
+        ushort ReadShort(ulong ulBase, ulong iOffset);
+            "Read word pointer"
+
+        ulong ReadLong(ulong ulBase, ulong iOffset);
+            "Read dword pointer"
+
+        double ReadDouble(ulong ulBase, ulong iOffset);
+            "Read double pointer"
+
+        bool   WriteByte(ulong ulBase, ulong iOffset,   char value);
+            "Write byte to a pointer"
+
+        bool  WriteShort(ulong ulBase, ulong iOffset,  short value);
+            "Write word to a pointer"
+
+        bool   WriteLong(ulong ulBase, ulong iOffset,   long value);
+            "Write dword to a pointer"
+
+        bool WriteDouble(ulong ulBase, ulong iOffset, double value);
+            "Write double to a pointer"
+
+        bool  WriteCode(ulong Addr, QString Array, int nop_count);
+            "Write 'Array' to 'Addr' + 'nop_count' nops"
+
+    Player:
+        int    maxHp::    READ:maxHp        WRITE:setMaxHp    NOTIFY:maxHpChanged
+
+        int       Hp::    READ:Hp           WRITE:setHp       NOTIFY:HpChanged
+
+        int    maxMp::    READ:maxMp        WRITE:setMaxMp    NOTIFY:maxMpChanged
+
+        int       Mp::    READ:Mp           WRITE:setMp       NOTIFY:MpChanged
+
+        int   maxExp::    READ:maxExp       WRITE:setMaxExp   NOTIFY:maxExpChanged
+
+        int      Exp::    READ:Exp          WRITE:setExp      NOTIFY:ExpChanged
+
+        int      Lvl::    READ:Lvl          WRITE:setLvl      NOTIFY:LvlChanged
+
+        int      map::    READ:map          WRITE:setMap      NOTIFY:mapChanged
+
+        int   spawnX::    READ:spawnX       WRITE:setSpawnX   NOTIFY:spawnXChanged
+
+        int   spawnY::    READ:spawnY       WRITE:setSpawnY   NOTIFY:spawnYChanged
+
+        QString Name::    READ:Name         WRITE:setName     NOTIFY:NameChanged
+
+        int  JobCode::    READ:JobCode      WRITE:setJobCode  NOTIFY:JobCodeChanged
+
+        int enteringMap:: READ:getEnteringMap WRITE:setEnteringMap NOTIFY:enteringMap
+
+    postBypass:
+        "Implement this function if you want to do any task after bypass is loaded (is bypass is present ofc)"
+
+Both sides:
+    getFolder:
+        "return the caller folder"
+    include(string s):
+        "Load 's' file. 's' must be on the caller folder"
+    debug:
+        "Native output to console. Use this specially if yo uwant to print on a BotStep."
